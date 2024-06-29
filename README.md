@@ -8,6 +8,7 @@ This steganography program allows you to hide and retrieve text, images, audio, 
 - **Hide audio files within images**: Audio is compressed to fit within the pixel budget of carrier.png. The carrier image may be resized up to 10 times by 10% increments before failing.
 - **Hide video files within videos**: Only supports .MP4 format. Compression occurs.
 - **Option to encrypt hidden data for added security**: AES-256 encryption.
+- **Hidden File Detection (WIP!!!)**: Broken At The Moment. This is a Work in Progress.
 
 ## Prerequisites
 
