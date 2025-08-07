@@ -76,9 +76,8 @@ def decode_image(image):
             break
 
     if data.startswith(SIGNATURE):
-        return data[len(SIGNATURE):]  # Remove signature before returning data
-    else:
-        return data
+        return bytes(data[len(SIGNATURE):])  # Remove signature before returning data
+    return None  # No signature found; likely no hidden data
 
 def calculate_required_pixels(data_size):
     return math.ceil(data_size * 8 / 3)
