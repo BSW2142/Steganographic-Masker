@@ -10,8 +10,8 @@ def search_image(image_path):
     try:
         image = Image.open(image_path, 'r')
         data = decode_image(image)
-        if data.startswith(SIGNATURE):
-            return data[len(SIGNATURE):]
+        if data is not None:
+            return data
         else:
             print("No signature found. Checking for other hidden data...")
             # Add heuristic checks for other hidden data here if needed

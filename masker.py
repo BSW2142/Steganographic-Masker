@@ -127,6 +127,9 @@ def decode():
     if file_type in ["text", "audio", "image"]:
         carrier = Image.open(carrier_path, 'r')
         data = decode_image(carrier)
+        if data is None:
+            print("No hidden data found in the provided image.")
+            return
         decode_data(data, file_type)
 
     elif file_type == "video":
